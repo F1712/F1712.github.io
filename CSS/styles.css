@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #1B1B1B;
+    min-height: 100vh;
+    position: relative;
+    padding: 30px 100px;
+    background: radial-gradient(#003cff,#00b7ff);
+    flex-wrap: wrap;
+}
+.main header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+.main header .logo img{
+    max-width: 200px;
+}
+
+.main header .list {
+    position: absolute;
+    padding-left: 60%;
+    min-width: 100px;
+}
+
+.main header .list ul{
+    display: flex;
+    margin-right: 50px;
+}
+.main header .list li{
+    list-style: none;
+}
+.main header .list a{
+    position: relative;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #fff;
+    font-size: 1.3em;
+}
+.main header .list a:hover{
+    color: #052694;
+    font-size: 1.6em;
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+.main header .search{
+    position: relative;
+    margin-right: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main header .search input{
+    border: none;
+    outline: none;
+    flex: auto;
+    border-radius: 15px;
+    min-width: 350px;
+    min-height: 30px;
+    padding: 10px;
+}
+.main header .search .btnbuscar{
+    border: none;
+    background: transparent;
+    transform: translateX(-30px);
+    color: #353434;
+}
+.main section{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+.main section .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+    width: 300px;
+    width: 400px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 81, 255, 0.2)
+}
+.main section .card .imgBx img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 30px;
+    backdrop-filter: blur(80px);
+}
+/** FALTA EL BLUR **/
+.main section .card .contentBx{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 400px;
+}
+.main section .card .contentBx content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main section .card .contentBx h3{
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 750;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    color: rgb(2, 42, 128);
+    margin-top: 7px;
+}
+.main section .card:hover{
+    cursor: pointer;
+}
+.main section .card:hover .contentBx{
+    top: -6px;
+    transition: 0.6s;
+}
+
+.main section .card .contentBx .listBx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    list-style: none;
+    color: rgb(0, 81, 255);;
+}
+
+.main section .card .contentBx li{
+    font-weight: 900;
+    margin-top: 50px;
+    font-size: 1.4em;
+    opacity: 0;
+    
+}
+
+.main section .card:hover .contentBx li{
+    opacity: 1;
+    transition: calc(0.8s*var(--i));
+}
+/** HAY QUE HACER QUE EL HEADER NO SE DESCONFIGURE TANTO CUANDO DISMINUYE LA ANCHURA**/
+.main footer{
+    width: 100%;
+    padding: 50px 0;
+    background-image: url(../IMG/background-footer.svg);
+    background-size: cover;
+    -webkit-mask-image: url(../IMG/background-footer.svg);
+    mask-image: url(../IMG/background-footer.svg);
+    -webkit-mask-size: cover;
+}
+.main .container_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+.main .container_footer .box_footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+}
+.main .container_footer .box_footer .logo img{
+    width: 250px;
+}
+
+.main .container_footer .box_footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+.main .container_footer .box_footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+    text-decoration: none;
+}
+.main .container_footer .box_footer a:hover{
+    opacity: 0.8;
+}
+.main .container_footer .box_footer a .fa-brands{
+    font-size: 20px;
+}
+.main .box_copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+.main .box_copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+.main .box_copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+@media (max-width:900px){
+    .main header{
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        flex-wrap: wrap;
+    }
+    .main header .list{
+        position: relative;
+        margin-left: -180px;
+        margin-top: 50px;
+    }
+    .main header .search{
+        margin-left: 200px;
+    }
+    .main section{
+        top: 150px;
+    }
+}
